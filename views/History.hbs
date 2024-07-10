@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/whg.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/responsive-whg.css">
+
+    <title>History</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #0c111b;">
+        <div class="container-fluid">
+          <a class="brand-logo" href="#">
+            <img width="55" class="img-fluid" src="images/logo.png" alt="">
+            <p class="brand-name me-4" style="font-weight: 500;">Anime Sekai</p>
+          </a>
+          <button class="btn btn-primary rounded-pill mt-1 sub-btn"><p>SUBSCRIBE</p></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto navul">
+                <li class="navlist">
+                  <a class="navlink" aria-current="page" href="Home">Home</a>
+                </li>
+                <li class="navlist">
+                  <a class="navlink" href="Genres">Genres</a>
+                </li>
+                <li class="navlist">
+                    <a class="navlink" id="sbtn">Subcription</a>
+                    <ul class="dropdown-menu sub-dropdown" id="sb">
+                        <li><a class="dropdown-item" href="#">Anime Test User</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="Watchlist">Watchlist</a></li>
+                        <li><a class="dropdown-item" href="History">history</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="index.html">Log out</a></li>
+                    </ul>
+                </li>
+              </ul>
+            <form class="d-flex">
+                <input class="srch me-1" onclick="toggelrh()" onblur="removerh()" type="search" placeholder="Search" aria-label="Search">
+                <button class="" id="searchbtn" type="submit"><img src="images/icons8-search-25.png" alt="" 
+                  ></button>
+                <div class="result-holder" id="rh">
+                    <div class="articles">
+                        <a href="">
+                            <div class="thumbnail-container">
+                                <div class="img-container">
+                                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/7456/267456-h
+                                    " alt="">
+                                </div>
+                            </div>
+                            <div class="search-wrap">
+                                <div class="meta-wrap">
+                                    <div class="srch-title">
+                                        Naruto
+                                    </div>
+                                    <span class="srch-subtitle">
+                                        Lorem, ipsum dolor.
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="articles">
+                        <a href="">
+                            <div class="thumbnail-container">
+                                <div class="img-container">
+                                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/7456/267456-h
+                                    " alt="">
+                                </div>
+                            </div>
+                            <div class="search-wrap">
+                                <div class="meta-wrap">
+                                    <div class="srch-title">
+                                        Naruto
+                                    </div>
+                                    <span class="srch-subtitle">
+                                        Lorem, ipsum dolor.
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="articles">
+                        <a href="">
+                            <div class="thumbnail-container">
+                                <div class="img-container">
+                                    <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/7456/267456-h
+                                    " alt="">
+                                </div>
+                            </div>
+                            <div class="search-wrap">
+                                <div class="meta-wrap">
+                                    <div class="srch-title">
+                                        Naruto
+                                    </div>
+                                    <span class="srch-subtitle">
+                                        Lorem, ipsum dolor.
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <button class="result-holder-btn">MORE RESULTS</button>
+                </div>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class="container-fluid pb-5" style="background-color: #0c111b;">
+        <div class="d-flex watchlist-title">
+            <a href="Home"><img src="images/icons8-double-left-40.png" alt=""></a>
+            <div id="Content">History</div>
+        </div>
+        <div id="genres">
+            <div class="history-box">
+                <img class="img-fluid history-card-img" src="images/watchlist-poster1.jpg" alt="">
+                <div class="history-box-content">
+                    <img class="cross-img" src="images/icons8-multiply-30.png" alt="">
+                    <h2 class="history-card-title"><img  width="12" src="images/play-btn.png" alt="">&nbsp;S1 E3 . 32 min</h2>
+                    <h6 class="history-card-des">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit</h6>
+                    <button class="history-watchlist-btn">SEE ALL EPISODE</button>
+                </div>
+            </div>
+            <div class="history-box">
+                <img class="img-fluid history-card-img" src="images/history-poster.jpg" alt="">
+                <div class="history-box-content">
+                    <img class="cross-img" src="images/icons8-multiply-30.png" alt="">
+                    <h2 class="history-card-title"><img  width="12" src="images/play-btn.png" alt="">&nbsp;S1 E3 . 32 min</h2>
+                    <h6 class="history-card-des">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit</h6>
+                    <button class="history-watchlist-btn">SEE ALL EPISODE</button>
+                </div>
+            </div>
+            <div class="history-box">
+                <img class="img-fluid history-card-img" src="images/watchlistposter2.jpg" alt="">
+                <div class="history-box-content">
+                    <img class="cross-img" src="images/icons8-multiply-30.png" alt="">
+                    <h2 class="history-card-title"><img  width="12" src="images/play-btn.png" alt="">&nbsp;S1 E3 . 32 min</h2>
+                    <h6 class="history-card-des">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit</h6>
+                    <button class="history-watchlist-btn">SEE ALL EPISODE</button>
+                </div>
+            </div>
+            <div class="history-box">
+                <img class="img-fluid history-card-img" src="images/watchlistposter3.jpg" alt="">
+                <div class="history-box-content">
+                    <img class="cross-img" src="images/icons8-multiply-30.png" alt="">
+                    <h2 class="history-card-title"><img  width="12" src="images/play-btn.png" alt="">&nbsp;S1 E3 . 32 min</h2>
+                    <h6 class="history-card-des">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit</h6>
+                    <button class="history-watchlist-btn">SEE ALL EPISODE</button>
+                </div>
+            </div>
+            <div class="history-box">
+                <img class="img-fluid history-card-img" src="images/watchlist-poster1.jpg" alt="">
+                <div class="history-box-content">
+                    <img class="cross-img" src="images/icons8-multiply-30.png" alt="">
+                    <h2 class="history-card-title"><img  width="12" src="images/play-btn.png" alt="">&nbsp;S1 E3 . 32 min</h2>
+                    <h6 class="history-card-des">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit</h6>
+                    <button class="history-watchlist-btn">SEE ALL EPISODE</button>
+                </div>
+            </div>
+            <div class="history-box">
+                <img class="img-fluid history-card-img" src="images/history-poster.jpg" alt="">
+                <div class="history-box-content">
+                    <img class="cross-img" src="images/icons8-multiply-30.png" alt="">
+                    <h2 class="history-card-title"><img  width="12" src="images/play-btn.png" alt="">&nbsp;S1 E3 . 32 min</h2>
+                    <h6 class="history-card-des">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit</h6>
+                    <button class="history-watchlist-btn">SEE ALL EPISODE</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-evenly mt-5">
+            <div class="col-lg-6 col-md-9">
+                <h4 class="text-light mt-2">Feedback</h4>
+                <input class="form-control mt-3 mb-4" type="text" placeholder="Your Name">
+                <input class="form-control mb-4" type="text" placeholder="Your Email">
+                <div class="form-outline">
+                    <textarea class="form-control" id="textAreaExample" rows="4" placeholder="Message"></textarea>
+                </div>
+                <button class="mt-4 cnt-btn">SUBMIT</button>
+                <div class="link-btn">
+                    <p class="text-light" style="font-size: 15px; font-weight: bold;">Contact Us on</p>
+                    <a href=""><img class="lik" src="Images/icons8-facebook-40.png" alt=""></a>
+                    <a href=""><img class="ms-3 lik" src="Images/icons8-instagram-40.png"alt=""></a>
+                </div>
+                <div class="link-btn">
+                    <a href="" class="ms-1" style="font-size: 15px; font-weight: bold; text-decoration: none; color: #1f80e0;">Privacy Policy</a>
+                    <a href="" class="ms-1" style="font-size: 15px; font-weight: bold; text-decoration: none; color: #1f80e0;">FAQ</a>
+                    <a href="" class="ms-1" style="font-size: 15px; font-weight: bold; text-decoration: none; color: #1f80e0;">Terms of use</a>
+                    <p class="text-light" style="font-size: 11px; font-weight: bold;">
+                        © 2023 STAR. All Rights Reserved. HBO, Home Box Office and all related channel and programming logos are service marks of, and all related programming visuals and elements are the property of, Home Box Office, Inc. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index2.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

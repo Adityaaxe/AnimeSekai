@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<!-- https://youtube.com/shorts/UyaiqgbmLpM?feature=share -->
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin-style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/responsiveloggedin.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <title>Admin AS</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #0c111b;">
+        <div class="container-fluid">
+          <a class="brand-logo" href="#">
+            <img width="55" class="img-fluid" src="images/logo.png" alt="">
+            <p class="brand-name" style="font-weight: 500;">Anime Sekai</p>
+          </a>
+        <button class="btn btn-primary rounded-pill mt-1 sub-btn" aria-current="page" href="#" data-toggle="modal" data-target="#exampleModal"><p>LOGIN</p></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto navul">
+              <li class="navlist">
+                <a class="navlink active" aria-current="page" href="">Home</a>
+              </li>
+              <li class="navlist">
+                <a class="navlink" href="Genres">Genres</a>
+              </li>
+              <li class="navlist">
+                <a class="navlink" id="sbtn">Subcription</a>
+                <ul class="dropdown-menu sub-dropdown" id="sb">
+                    <li><a class="dropdown-item" href="#">Anime Test User</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="Watchlist">Watchlist</a></li>
+                    <li><a class="dropdown-item" href="History">history</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="">Log out</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="srch me-1" onclick="toggelrh()" onblur="removerh()" type="search" placeholder="Search" aria-label="Search">
+              <button class="" id="searchbtn" type="submit"><img src="images/icons8-search-25.png" alt="" 
+              ></button>
+              <div class="result-holder" id="rh">
+                <div class="articles">
+                    <a href="">
+                        <div class="thumbnail-container">
+                            <div class="img-container">
+                                <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/7456/267456-h
+                                " alt="">
+                            </div>
+                        </div>
+                        <div class="search-wrap">
+                            <div class="meta-wrap">
+                                <div class="srch-title">
+                                    Naruto
+                                </div>
+                                <span class="srch-subtitle">
+                                    Lorem, ipsum dolor.
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="articles">
+                    <a href="">
+                        <div class="thumbnail-container">
+                            <div class="img-container">
+                                <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/7456/267456-h
+                                " alt="">
+                            </div>
+                        </div>
+                        <div class="search-wrap">
+                            <div class="meta-wrap">
+                                <div class="srch-title">
+                                    Naruto
+                                </div>
+                                <span class="srch-subtitle">
+                                    Lorem, ipsum dolor.
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <button class="result-holder-btn">MORE RESULTS</button>
+            </form>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button class="login-btn ms-2" aria-current="page" href="#" data-toggle="modal" data-target="#exampleModal">LOGIN</button>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container-fluid mt-5 mb-5">
+      <div class = "option-box">
+        <div class="admin-details">
+          <img src="images/WhatsApp Image 2023-09-11 at 10.39.23 PM.jpeg" alt="">
+          <div>
+            <h6>Aditya Pratap Singh</h6>
+            <p>Admin</p>
+          </div>
+        </div>
+        <hr>
+        <div class="options">
+          <ul class="option-list">
+            <li><a class="text-decoration-none text-dark" href="/Home">Home</a></li>
+            <li><a class="text-decoration-none text-dark" href="#content">Content</a></li>
+            <li><a class="text-decoration-none text-dark" href="#videos">Videos</a></li>
+            <li><a class="text-decoration-none text-dark" href="#list">List</a></li>
+            <li><a class="text-decoration-none text-dark" href="#content">Episodes</a></li>
+            <li><a class="text-decoration-none text-dark" href="#content">Updation</a></li>
+          </ul>
+        </div>
+        <div class="admin-options">
+          <hr>
+          <h6>Setting</h6>
+          <h6>Logout</h6>
+        </div>
+      </div>
+      <div class="content-form" id="#content">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+          <input class="vid-main-details" type="text" placeholder="Title" name="title">
+          <textarea class="vid-desc-details" id="textAreaExample" rows="4" placeholder="Message" name="desc"></textarea>
+          <input class="vid-details ms-3" type="number" placeholder="Sub" name="sub">
+          <input class="vid-details ms-2" type="number" placeholder="Dub" name="dub">
+          <input class="vid-details ms-2" type="text" placeholder="Duration" name="duration">
+          <input class="vid-details ms-2" type="text" placeholder="Genres" name="genres" multiple>
+          <select class="vid-details" placeholder="Corousel" name="iscarousel">
+            <option value="false">Corousel False</option>
+            <option value="true">Corousel True</option>
+          </select>
+          <div class="media-details">
+            {{!-- <input class="media-details-file" type="file" placeholder="Video 1" name="vid1">
+            <input class="media-details-file" type="file" placeholder="Video 2" name="vid2">
+            <input class="media-details-file" type="file" placeholder="Video 3" name="vid3"> --}}
+            <input class="media-details-file" type="file" placeholder="Episodes" name="episodes" multiple>
+            <input class="media-details-file" type="file" placeholder="Poster" name="poster">
+            <input class="media-details-file" type="file" placeholder="V Card"  name="vcard">
+            <input class="media-details-file" type="file" placeholder="H Card" name="hcard">
+          </div>
+          <button class="sub-button" type="submit">Submit</button>
+          <button class="upd-button" type="submit">Update</button>
+        </form>
+      </div>
+      <div class="content-form mb-5" id="#content">
+        <form action="/update" method="POST" enctype="multipart/form-data">
+          <select class="vid-main-details" placeholder="Title" name="title">
+            {{#each Carousel}}
+            <option value="{{this.title}}">{{this.title}}</option>
+            {{/each}}
+          </select>
+          <input class="vid-details ms-2" type="text" placeholder="Genres" name="genres">
+          <input class="media-details-file" type="file" placeholder="episodes" name="episode" multiple>
+          <button class="upd-button" type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index2.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
