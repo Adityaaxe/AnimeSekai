@@ -894,8 +894,11 @@
     color: #fff !important;
     font-size: 12px;
     text-transform: capitalize;
-    margin-top: 24%;
+    margin-top: 30%;
     font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .watchlist-card-des
 {
@@ -904,6 +907,9 @@
     margin: -3px 0;
     font-weight: 500;
     font-size: 9px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .watchlist-watchlist-btn
 {

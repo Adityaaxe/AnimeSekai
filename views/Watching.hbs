@@ -180,16 +180,16 @@
         <h1 class="title">Trailers & Extras</h1>
         <div class="watchlist-movies-list ">
             <div class="card example-1 myscroll scrollbar-ripe-malinka">
-                {{#each episode}}
+                {{!-- {{#each episode}} --}}
                 <div class="watchlist-box">
-                    <img class="img-fluid watchlist-card-img" src="/images/watchlist-poster1.jpg" alt="">
+                    <img class="img-fluid watchlist-card-img" src="/images/{{HCard}}" alt="">
                     <div class="watchlist-box-content">
-                        <h2 class="watchlist-card-title">S1 E3 . 32 min</h2>
-                        <h6 class="watchlist-card-des">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit</h6>
-                        <button class="watchlist-watchlist-btn">SEE ALL EPISODE</button>
+                        <h2 class="watchlist-card-title">{{Watchdetails.title}}</h2>
+                        <h6 class="watchlist-card-des">{{Watchdetails.description}}</h6>
+                        <button class="watchlist-watchlist-btn">PLAY</button>
                     </div>
                 </div>
-                {{/each}}
+                {{!-- {{/each}} --}}
             </div>
         </div>
         <h1 class="main-watch-topi-title">Related</h1>

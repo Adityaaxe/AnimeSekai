@@ -195,7 +195,8 @@ app.get("/Watching/:_id", watchingdata, (req, res)=>{
     console.log(Watchdetails.episodes);
     episode = Watchdetails.episodes;
     episodeno = Watchdetails.episodes[0];
-    res.render("Watching",{ Watchdetails, episode, episodeno});
+    HCard = Watchdetails.hcard;
+    res.render("Watching",{ Watchdetails, episode, episodeno, HCard});
 
 });
 
@@ -264,6 +265,8 @@ app.get("/Admin", contentdata, async(req, res)=>{
 app.post("/upload", upload.fields([{ name: 'episodes', maxCount:3}, { name: 'poster', maxCount:1}, { name: 'vcard', maxCount:1}, { name: 'hcard', maxCount:1}]), async(req, res)=>{
     try {
 
+        console.log("reached");
+
         const Content = new UploadContent({
 
             title : req.body.title,
@@ -273,12 +276,14 @@ app.post("/upload", upload.fields([{ name: 'episodes', maxCount:3}, { name: 'pos
             duration : req.body.duration,
             genres : req.body.genres,
             iscarousel : req.body.iscarousel,
-            episodes : req.files['episodes'][2].filename,
+            episodes : req.files['episodes'][0].filename,
             poster : req.files['poster'][0].filename,
             vcard : req.files['vcard'][0].filename,
             hcard : req.files['hcard'][0].filename
 
         })
+
+        console.log("reached here too")
 
         const contentsaved = await Content.save();
         res.status(201).redirect("/Admin");
